@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <style>
+      /* --- TIPOGRAFIA E ESTILOS BASE --- */
+      .ui-text { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; fill: #dbd6d6; }
+      .folder-text { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 11px; font-weight: bold; fill: #bbbbbb; }
+      .file-active { fill: #ffffff; font-weight: 500; }
+      
+      .text-body { font-family: 'Fira Code', Consolas, monospace; font-size: 24px; color: #CE9178; display: flex; }
+      .comment { color: #6A9955; display: block; height: 36px; line-height: 36px; }
+      .gutter { color: #858585; padding: 0 20px 0 10px; text-align: right; user-select: none; font-family: 'Fira Code', monospace; font-size: 24px; line-height: 36px; border-right: 1px solid #333333; margin-right: 15px; }
+      .line-content { display: flex; flex-direction: column; line-height: 38px; }
+
+      /* --- ANIMAÇÕES --- */
+      .cursor { display: inline-block; width: 2px; height: 30px; background-color: #CCFF00; animation: blink 1s steps(1) infinite; margin-left: 2px; vertical-align: middle; }
+      .dirty-indicator { animation: showBall 8s infinite; }
+      .close-icon { animation: showX 8s infinite; stroke: #858585; stroke-width: 1.5; }
+      .typewriter::after { content: ""; animation: typewriter 8s infinite; }
+
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+      @keyframes showBall { 0%, 60% { opacity: 1; } 61%, 95% { opacity: 0; } 96%, 100% { opacity: 1; } }
+      @keyframes showX { 0%, 60% { opacity: 0; } 61%, 95% { opacity: 1; } 96%, 100% { opacity: 0; } }
+      
+      @keyframes typewriter {
+        0%, 5% { content: ""; }
+        7% { content: "p"; } 8% { content: "pr"; } 9% { content: "pri"; } 10% { content: "prin"; } 11% { content: "print"; }
+        14% { content: "print("; } 17% { content: "print(\""; }
+        20% { content: "print(\"H"; } 21% { content: "print(\"He"; } 22% { content: "print(\"Hel"; } 23% { content: "print(\"Hell"; } 24% { content: "print(\"Hellp"; }
+        32%, 35% { content: "print(\"Hellp"; }
+        37%, 41% { content: "print(\"Hell"; }
+        42% { content: "print(\"Hello"; } 43% { content: "print(\"Hello "; }
+        46% { content: "print(\"Hello W"; } 47% { content: "print(\"Hello Wo"; } 48% { content: "print(\"Hello Wor"; } 49% { content: "print(\"Hello Worl"; } 50% { content: "print(\"Hello World"; }
+        53% { content: "print(\"Hello World\""; } 56%, 92% { content: "print(\"Hello World\")"; }
+        96%, 100% { content: ""; }
+      }
+    </style>
+  </defs>
+
+  <rect width="800" height="450" fill="#1E1E1E" rx="10" />
+  
+  <rect width="50" height="450" fill="#333333" rx="10 0 0 10" />
+  <g transform="translate(15, 30)">
+    <rect width="20" height="20" rx="2" stroke="#ffffff" stroke-width="2" fill="none" />
+    <path d="M10 50 L18 65 L2 65 Z" stroke="#858585" stroke-width="2" fill="none" />
+    <circle cx="10" cy="90" r="8" stroke="#858585" stroke-width="2" fill="none" />
+    <path d="M10 115 L18 120 L18 130 L10 135 L2 130 L2 120 Z" stroke="#858585" stroke-width="2" fill="none" />
+  </g>
+
+  <rect x="50" y="0" width="180" height="450" fill="#252526" />
+  <text x="65" y="25" class="ui-text" font-weight="bold" style="letter-spacing: 1px;">EXPLORER</text>
+  
+  <g transform="translate(65, 55)">
+    <text y="0" class="folder-text">▼ linguagem-programacao</text>
+    <g transform="translate(10, 25)">
+      <path d="M0 0 Q5 -5 10 0 T20 0 T30 0 T40 0" stroke="#858585" stroke-width="2" fill="none" opacity="0.6" />
+      <text x="45" y="4" class="ui-text">.ipynb</text>
+      <g transform="translate(0, 25)">
+        <path d="M0 0 Q5 -5 10 0 T20 0 T30 0" stroke="#858585" stroke-width="2" fill="none" opacity="0.6" />
+        <text x="35" y="4" class="ui-text">.c</text>
+      </g>
+      <g transform="translate(0, 50)">
+        <path d="M0 0 Q5 -5 10 0 T20 0 T30 0 T40 0 T50 0" stroke="#858585" stroke-width="2" fill="none" opacity="0.6" />
+        <text x="55" y="4" class="ui-text">.md</text>
+      </g>
+      <g transform="translate(0, 75)">
+        <rect x="-25" y="-10" width="181" height="22" fill="#37373D" /> 
+        <text x="0" y="4" class="ui-text file-active">lprogramação.py</text>
+      </g>
+    </g>
+  </g>
+
+  <rect x="230" y="0" width="1" height="428" fill="#333333" />
+
+  <rect x="230" y="0" width="570" height="35" fill="#2D2D2D" />
+  <g transform="translate(230, 0)">
+    <rect width="135" height="35" fill="#1E1E1E" />
+    <rect width="135" height="2" fill="#007ACC" /> 
+    <text x="15" y="22" class="ui-text file-active">lprogramação.py</text>
+    <circle cx="120" cy="18" r="4" fill="#d1caca" class="dirty-indicator" />
+    <g class="close-icon" opacity="0">
+      <line x1="116" y1="14" x2="124" y2="22" />
+      <line x1="124" y1="14" x2="116" y2="22" />
+    </g>
+  </g>
+
+  <foreignObject x="231" y="60" width="550" height="82">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="text-body">
+      <div class="gutter">1<br/>2</div>
+      <div class="line-content">
+        <span class="comment"># Linguagem Python</span>
+        <div style="height: 36px; display: flex; align-items: center;">
+          <span class="typewriter"></span><span class="cursor"></span>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+
+  <rect y="428" width="800" height="22" fill="#007ACC" rx="0 0 10 10" />
+  <text x="15" y="443" class="ui-text">Murilo G.</text>
+  <text x="760" y="443" class="ui-text">L.P</text>
+</svg>
